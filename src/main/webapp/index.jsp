@@ -150,9 +150,9 @@
                         <i class="card-icon ti-credit-card mb-5"></i>
                         <h3 class="card-title h4">Ingresar palabra a verificar</h3>
                         <form>
-                            <label for="palabra">Ingrese una palabra:</label>
-                            <input type="text" id="palabra" name="palabra">
-                            <button type="button" onclick="verificarPalindromo()">Verificar</button>
+                            <label for="palabra" style="font-weight: bold; display: block; margin-bottom: 5px;">Ingrese una palabra:</label>
+                            <input type="text" id="palabra" name="palabra" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                            <button type="button" onclick="verificarPalabra()" style="background-color: #007BFF; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Verificar</button>
                         </form>
                     </div>
                 </div>
@@ -163,16 +163,39 @@
                     <div class="card-body">
                         <i class="card-icon ti-package mb-5"></i>
                         <h3 class="card-title h4">tabla de resultado, palabra ingresada a verificar si es palindromo</h3>
-                        <table border="1">
+                        <table border="1" style="width: 100%;  margin: 0 auto; border-collapse: collapse;">
                             <tr>
-                                <th>Palabra</th>
-                                <th>Es Palíndromo</th>
+                                <th style="background-color: #f2f2f2; text-align: left; padding: 8px;">Palabra</th>
+                                <th style="background-color: #f2f2f2; text-align: left; padding: 8px;">Es Palíndromo</th>
                             </tr>
                             <tr>
-                                <td id="palabraIngresada"></td>
-                                <td id="Verificacion"></td>
+                                <td id="palabraIngresada" style="text-align: left; padding: 8px; border-bottom: 1px solid #ddd;"></td>
+                                <td id="Verificacion" style="text-align: left; padding: 8px; border-bottom: 1px solid #ddd;"></td>
                             </tr>
                         </table>
+
+                        <script>
+                            function invertirPalabra(palabra) {
+                                palabra = palabra.replace(/\s/g, '').toLowerCase();
+                                const palabraReverse = palabra.split('').reverse().join('');
+                                return palabra === palabraReverse;
+                            }
+
+                            function verificarPalabra() {
+                                const palabraIngresada = document.getElementById("palabra");
+                                const palabraIngresadaTabla = document.getElementById("palabraIngresada");
+                                const VerificacionTabla = document.getElementById("Verificacion");
+                                const palabra = palabraIngresada.value;
+
+                                palabraIngresadaTabla.textContent = palabra;
+                                if (invertirPalabra(palabra)) {
+                                    VerificacionTabla.textContent = "Sí";
+                                } else {
+                                    VerificacionTabla.textContent = "No";
+                                }
+                            }
+                        </script>
+
                     </div>
                 </div>
             </div>
