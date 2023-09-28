@@ -162,9 +162,17 @@
                 <div class="card match-height">
                     <div class="card-body">
                         <i class="card-icon ti-package mb-5"></i>
-                        <h3 class="card-title h4">Our Features</h3>
-                        <p class="card-text">Cras at dolor eget urna varius faucibus tempus in elit dolor sit amet.</p>
-                        <a href="list.html" class="stretched-link"></a>
+                        <h3 class="card-title h4">tabla de resultado, palabra ingresada a verificar si es palindromo</h3>
+                        <table border="1">
+                            <tr>
+                                <th>Palabra</th>
+                                <th>Es Palíndromo</th>
+                            </tr>
+                            <tr>
+                                <td id="palabraIngresada"></td>
+                                <td id="Verificacion"></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
