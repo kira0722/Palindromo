@@ -148,9 +148,12 @@
                 <div class="card match-height">
                     <div class="card-body">
                         <i class="card-icon ti-credit-card mb-5"></i>
-                        <h3 class="card-title h4">Account Bill</h3>
-                        <p class="card-text">Cras at dolor eget urna varius faucibus tempus in elit dolor sit amet.</p>
-                        <a href="list.html" class="stretched-link"></a>
+                        <h3 class="card-title h4">Ingresar palabra a verificar</h3>
+                        <form>
+                            <label for="palabra">Ingrese una palabra:</label>
+                            <input type="text" id="palabra" name="palabra">
+                            <button type="button" onclick="verificarPalindromo()">Verificar</button>
+                        </form>
                     </div>
                 </div>
             </div>
