@@ -123,7 +123,18 @@
                             double x = 3.4;
                             char y = 'r';
                             boolean o = true;
+                            char arreglo[] = {'a', 'n','a'};
+
+                            for (int i = 0; i < arreglo.length; i++) {
                         %>
+                        <b>El valor es: </b> <%= arreglo[i]%><br/>
+                        <%
+                            }
+
+                        %>
+
+                        El valor de a es: <%= a++ %><br/>
+                        El valor de a es: <%= ++a %>
 
                         <i class="card-icon ti-panel mb-5"></i>
                         <h3 class="card-title h4">Basic Startup</h3>
