@@ -117,6 +117,14 @@
                 <div class="card match-height">
                     <div class="card-body">
 
+                        <%
+                            int a = 5;
+                            float b = 3;
+                            double x = 3.4;
+                            char y = 'r';
+                            boolean o = true;
+                        %>
+
                         <i class="card-icon ti-panel mb-5"></i>
                         <h3 class="card-title h4">Basic Startup</h3>
                         <p class="card-text">Cras at dolor eget urna varius faucibus tempus in elit dolor sit amet.</p>
